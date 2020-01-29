@@ -47,7 +47,7 @@ push: # CI_JOB_NAME
 run: # CI_JOB_NAME
   stage: push
   script:
-    - docker rm -f nginx-plus-appster-demo
+    - docker rm -f nginx-plus-appster-demo-live
     - docker run --name nginx-plus-appster-demo-live --net="host" --restart=always -d nginx-plus-appster-demo
 
 clean_up:
